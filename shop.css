@@ -1,0 +1,189 @@
+/* Stilovi za formu */
+.form-container {
+    width: 70%; /* širina forme */
+    max-width: 750px; 
+    padding: 20px; /* Dodatni razmak unutar forme */
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena */
+    margin: auto; 
+    margin-top: 100px; 
+    text-align: left;
+}
+
+/* Stilovi za oznake */
+.form-container label {
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+/* Stilovi za input elemente */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="number"],
+.form-container textarea,
+.form-container select {
+    width: 100%; 
+    padding: 10px; 
+    margin: 0 auto; 
+    margin-bottom: 15px; 
+    border-radius: 10px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+
+/* Stilizovanje slika pored radio button-a */
+.product-image {
+    width: 100px; 
+    height: 100px; 
+    margin-left: 0px; /* Razmak desno od radio dugmeta */
+    vertical-align: middle; 
+    border-radius: 30%;
+    border: 2px solid #333533; /* Okvir oko slike */
+}
+
+.custom-checkbox {
+    display: flex; 
+    margin-left:-60px;
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Stilovi za checkbox */
+.custom-checkbox .checkmark {
+    position: absolute; 
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #641636; 
+    border-radius: 4px;
+    vertical-align: middle; 
+}
+
+/* Stilovi za ..checkbox */
+.custom-checkbox {
+    position: relative; 
+  }
+  
+  .custom-checkbox .checkmark {
+    position: absolute; 
+    top: 50%; 
+    right: 30px; /* Pomaknite checkbox ulijevo */
+    transform: translateY(-50%); /* Centrirajte vertikalno */
+    width: 20px;
+    height: 20px;
+    background-color: #ccc; /* Boja checkboxa */
+    border-radius: 4px;
+  }
+  
+/* Stilovi za kvaku unutar checkboxa */
+.custom-checkbox .checkmark::before {
+    content: ""; 
+    display: block;
+    width: 5px;
+    height: 8px;
+    border: solid #fff; 
+    border-width: 0 2px 2px 0; /* Debljina i oblik kvake */
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) rotate(40deg); /* Centriranje i rotacija */
+    opacity: 1; 
+}
+
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #04AA6D; /* Boja checkboxa kad je označen */
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark::before {
+    opacity: 1; /* Vidljiva kvaka kad je checkbox označen */
+  }
+  
+
+/* Stilovi za ..checkbox kad je označen */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #04AA6D; /* Zelena boja kutije kad je označeno */
+}
+
+/* Stilovi za kvaku unutar ..checkboxa kad je označen */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::before {
+    opacity: 1; /* Kvaka postaje vidljiva kad je checkbox označen */
+}
+#narudzbaa {
+    margin-top: -100px; /* Uklanja razmak odozgo */
+    margin-bottom: -250px; /* Uklanja razmak odozdo */
+}
+
+.narudzba h1 {
+    font-size: 55px; 
+    text-transform: uppercase; 
+    text-align: absolute; 
+}
+.tekstproiz {
+    font-size: 18px; 
+    text-align: left; 
+    margin-bottom: 10px; 
+    display: block; 
+    border-bottom: 1px solid rgb(39, 37, 37); 
+}
+
+
+#submit {
+    background-color: #045f3e; /* Pozadina dugmeta */
+    color: rgb(255, 255, 255); /* Boja teksta */
+    padding: 12px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    border-bottom: 1px solid rgb(39, 37, 37); /* Dodaje donju liniju */
+    text-transform: uppercase; 
+    display: block; 
+    border: none; 
+    font-weight: bold; 
+}
+
+
+#submit:hover {
+    background-color: #28722c; /* Promjena boje pozadine na hover */
+}
+
+#submit1 {
+    background-color: #262727; /* Pozadina dugmeta */
+    color: rgb(255, 255, 255); 
+    padding: 12px 20px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    display: block; 
+    border: none; 
+    font-weight: bold; 
+}
+
+
+#submit1:hover {
+    background-color: #d675da; /* Promjena boje pozadine na hover */
+}
+
+#success-message {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px; /* Uklonjena razmak između broja i jedinica */
+    color: rgb(3, 136, 32);
+    font-weight: italic;
+    text-align: center;
+    border-bottom: 1px solid rgb(39, 37, 37); /* Dodaje donju liniju */
+    margin-bottom: -30px; /* Dodaje razmak ispod teksta */
+}
+#totalprice {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #131313; 
+    background-color: #f5f5f5; 
+    padding: 5px; 
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+    text-align: center; 
+    margin-top: 3px; 
+    width: 200px; 
+    margin-left: 50; 
+    margin-right: auto; /* Centriranje po horizontali */
+    margin-bottom: 10px;
+}
