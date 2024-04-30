@@ -120,7 +120,7 @@
     text-align: absolute; 
 }
 .tekstproiz {
-    font-size: 18px; 
+    font-size: 20px; 
     text-align: left; 
     margin-bottom: 10px; 
     display: block; 
@@ -186,4 +186,14 @@
     margin-left: 50; 
     margin-right: auto; /* Centriranje po horizontali */
     margin-bottom: 10px;
+}
+/* Povećanje veličine teksta za nazive proizvoda */
+.product-name {
+    font-size: 25px; /* Promijenite ovu vrijednost prema vašim preferencijama */
+}
+
+/* Povećanje veličine teksta za tekst forme */
+.form-container label,
+.form-container select {
+    font-size: 16px; /* Promijenite ovu vrijednost prema vašim preferencijama */
 }

@@ -30,7 +30,7 @@
             <li><a href="#contact" data-after="Contact">Kontakt</a></li>
             <li><a href='login.php' data-after="Login">Log in</a></li>
             <li><a href= 'signup.php' data-after="Signup">Sign up</a></li>
-            <li class="cartIcon" id="cartIcon"><a href='../user-shop.php'><img src="https://cdn-icons-png.flaticon.com/512/469/469354.png" alt="Korpa"></a></li>
+            <li class="cartIcon" id="cartIcon"><a href='../user-shop.php'><img src="https://i.imgur.com/8kNLLad.png" alt="Korpa"></a></li>
             
           </ul>
         </div>
