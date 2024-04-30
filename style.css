@@ -876,9 +876,20 @@ button[name="submit"]:active {
 
 
 /* Stilovi za ikonicu korpe */
-.cartIcon img {
-  width: 32px; /* Širina slike korpe */
-  height: 30px; /* Automatska visina */
-  position: absolute; /* Pozicioniranje elementa */
+#cartIcon img {
+  width: 40px; /* Širina slike korpe */
+  height: 40px; /* Visina slike korpe */
+  top: 20px;
+  border-radius: 50%; /* Zaobljeni rubovi */
+  background-color: white; /* Bijela pozadina */
 
 }
+
+#cartIcon {
+  position: fixed; /* Pozicioniranje element */
+  top: -10px; /*  od vrha preglednika */
+  right: -20px; /*  od desne strane preglednika */
+
+
+}
+

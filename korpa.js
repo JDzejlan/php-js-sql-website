@@ -42,37 +42,39 @@ function addCartEventListener() {
 
 
 
-// Pokretanje funkcije nakon učitavanja dokumenta
 document.addEventListener('DOMContentLoaded', function() {
     addCartEventListener();
-});
-
-document.querySelectorAll('input[type="number"]').forEach(function(input) {
-    input.addEventListener('input', function() {
-        // Ukupna cijena
-        let totalPrice = 0;
-
-        // Prolazak kroz sve proizvode
-        document.querySelectorAll('input[name^="quantity"]').forEach(function(quantityInput) {
-            let productID = quantityInput.name.replace('quantity', '');
-
-            // Dobijanje količine proizvoda
-            let quantity = parseInt(quantityInput.value) || 0;
-
-            // Dobijanje cijene proizvoda iz dataset-a
-            let productInput = document.querySelector('input[name="product"][value="' + productID + '"]');
-            if (productInput) {
-                let productPrice = parseFloat(productInput.dataset.price);
-
-                // Račun ukupne cijene za ovaj proizvod
-                let productTotalPrice = quantity * productPrice;
-
-                // Dodavanje cene proizvoda ukupnoj ceni
-                totalPrice += productTotalPrice;
-            }
-        });
-
-        // Ažuriranje ukupne cijene korisniku
-        document.getElementById('totalprice').textContent = 'Ukupna cijena: ' + totalPrice.toFixed(2) + ' KM';
+    
+    // Dodavanje event listenera za promjenu količine
+    document.querySelectorAll('input[type="number"]').forEach(function(input) {
+        input.addEventListener('input', updateTotalPrice);
     });
 });
+
+function updateTotalPrice() {
+    // Ukupna cijena
+    let totalPrice = 0;
+
+    // Prolazak kroz sve proizvode
+    document.querySelectorAll('input[name^="quantity"]').forEach(function(quantityInput) {
+        let productID = quantityInput.name.replace('quantity', '');
+
+        // Dobijanje količine proizvoda
+        let quantity = parseInt(quantityInput.value) || 0;
+
+        // Dobijanje cijene proizvoda iz identifikatora
+        let productPriceElement = document.getElementById('cijena' + productID);
+        if (productPriceElement) {
+            let productPrice = parseFloat(productPriceElement.textContent);
+
+            // Račun ukupne cijene za ovaj proizvod
+            let productTotalPrice = quantity * productPrice;
+
+            // Dodavanje cijene proizvoda ukupnoj ceni
+            totalPrice += productTotalPrice;
+        }
+    });
+
+    // Ažuriranje ukupne cijene korisniku
+    document.getElementById('totalprice').textContent = 'Ukupna cijena: ' + totalPrice.toFixed(2) + ' KM';
+}
