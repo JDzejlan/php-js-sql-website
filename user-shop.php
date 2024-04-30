@@ -11,11 +11,11 @@
 </head>
 
 <body>
-<?php session_start();
-print_r($_SESSION);
-?>
-    <?php include 'konekcija/conn.php'; 
-    require('shopUser-header.php');
+    <?php session_start();
+    print_r($_SESSION);
+    ?>
+    <?php include 'konekcija/conn.php';
+    require ('shopUser-header.php');
     ?>
     <section id="narudzbaa">
         <div class="narudzba container">

@@ -23,10 +23,11 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href= 'index.php' data-after="Home">Početna</a></li>
+            <li><a href='index.php' data-after="Home">Početna</a></li>
             <li><a href='changepass-user.php' data-after="Contact">Promjena Šifre</a></li>
             <li><a href='logout.php' data-after="Login">Odjavite se</a></li>
-            <li class="cart-icon"><a href='../user-shop.php'><img src="https://cdn-icons-png.freepik.com/512/8426/8426040.png" alt="Korpa"></a></li>
+            <li class="cart-icon"><a href='../user-shop.php'><img
+                  src="https://cdn-icons-png.freepik.com/512/8426/8426040.png" alt="Korpa"></a></li>
             <li></li>
           </ul>
         </div>
@@ -35,5 +36,5 @@
     <script src="../korpa.js"></script>
 
 </body>
-  </section>
-  <!-- End Header -->
+</section>
+<!-- End Header -->
