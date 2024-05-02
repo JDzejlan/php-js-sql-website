@@ -11,7 +11,9 @@
 </head>
 
 <body>
-
+<?php session_start();
+print_r($_SESSION);
+?>
     <?php include 'konekcija/conn.php'; 
     require('shopUser-header.php');
     ?>
