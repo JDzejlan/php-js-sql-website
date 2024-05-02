@@ -14,6 +14,6 @@ hamburger.addEventListener("click", () => {
 
 menu_item.forEach((item) => {
   item.addEventListener("click", () => {
-    hamburger.classList.toggle("active");s
+    hamburger.classList.toggle("active");
   });
 });
