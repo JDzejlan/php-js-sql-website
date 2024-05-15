@@ -2,12 +2,12 @@
     require('../konekcija/conn.php'); 
     require('prijava.php');
     require('header.php');
-    $username = $_SESSION["korisnik_sesija"]; // sprema korisnicki username pomocu sesiju, jer nam je sesija zasnovana na username
+    $username = $_SESSION["korisnik_sesija"]; 
 
-    $sqle = "SELECT * FROM registrovani WHERE korisnik='$username'"; // upit se sprema u varijablu
-    $query2 = mysqli_query($db, $sqle); // izvrsava se upit
-    $row = mysqli_fetch_row($query2); // vraca nam kompletan red tog korisnika na osnovu prethodnog upita, odnosno usernmaea
-    foreach($query2 as $row) {  // for petlja prolazi kroc ijeli red dok ne nadje admin kolonu i istom
+    $sqle = "SELECT * FROM registrovani WHERE korisnik='$username'"; 
+    $query2 = mysqli_query($db, $sqle); 
+    $row = mysqli_fetch_row($query2); 
+    foreach($query2 as $row) {  
         $admin = $row['admin'];
     }
     if($admin == 0) { echo'<script>window.location="user.php";</script>'; return true;} // ukoliko je admin vrijednost == 0 
@@ -15,7 +15,7 @@
                                                                                         // nema pristup panel/index.php
                                                                                         // nego ga redirecta na panel/user.php
                                                                                         // a u suprotnom korisnik ima pristup panel/index.php
-  ?>                                                                                    
+  ?>                                                                                 
   <!-- Hero Section  -->
   <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@
       <div>
         <h1>Dobrodošao<span></span></h1>
         <h1 style= "text-transform: capitalize;"> <?php print $_SESSION["korisnik_sesija"]; ?> <span></span></h1> <!-- uzima ime korisnika
-        iz sesije, style= "text-transform: capitalize; forsira da prvo slobo bude veliko, te nam ispisuje dobrodosao (trenutacni korisnik) !-->
+        iz sesije, style= "text-transform: capitalize; forsira da prvo slovo bude veliko, te nam ispisuje dobrodosao (trenutni korisnik) !-->
       </div>
     </div>
   </section>
@@ -75,11 +75,9 @@
   <div class="projects container">
     <div class="projects-header">
       <h1 class="section-title">Prethodni <span>Projekti</span></h1>
-      <!-- Button za prikaz forme -->
-<!-- Div za centriranje dugmeta -->
     <div class="centrirano">
-  <!-- Button za prikaz forme -->
-  <button id="dodajProjektBtn" class="dugme">Dodaj novi projekt</button>
+  <div class="form-button-container">
+    <button id="dodajProjektBtn" class="dugme">Dodaj novi projekt</button>
 </div>
 <form id="formaProjekta" style="display: none;" action="snimiProjekat.php" method="post">
     <label for="brojProjekta">Broj projekta:</label><br>
@@ -87,11 +85,13 @@
     <label for="nazivProjekta">Naziv projekta:</label><br>
     <input type="text" id="nazivProjekta" name="nazivProjekta"><br>
     <label for="opisProjekta">Opis projekta:</label><br>
-    <textarea id="opisProjekta" name="opisProjekta"></textarea><br>
+    <input type="text" id="opisProjekta" name="opisProjekta"><br>
     <label for="URL_slika">URL slika:</label><br>
     <input type="text" id="URL_slika" name="URL_slika"><br>
     <button type="submit">Dodaj</button>
 </form>
+
+
 
 
 
@@ -126,7 +126,7 @@
       // Zatvaranje veze s bazom podataka
       mysqli_close($db);
       ?>
-      <script src="../dodajProjekat.js"></script>
+      <script src="../js/dodajProjekat.js"></script>
     </div>
   </div>
 </section>
@@ -195,3 +195,4 @@
       </div>
     </div>
   <!-- End Contact Section -->
+  <img src="https://i.imgur.com/6DOmyev.png" id="lokejsn" alt="Slika" class="contact-image">

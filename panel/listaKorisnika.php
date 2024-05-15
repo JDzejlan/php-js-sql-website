@@ -7,12 +7,10 @@ ini_set('display_errors', '1');
 
 session_start();
 
-// Provjeri je li zahtjev za brisanje korisnika poslan
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteUser'])) {
-    // Dobavi korisničko ime korisnika koji se treba izbrisati
+    
     $usernameToDelete = $_POST['deleteUser'];
 
-    // Izvrši SQL upit za brisanje korisnika
     $deleteQuery = "DELETE FROM registrovani WHERE korisnik = '$usernameToDelete'";
     $deleteResult = mysqli_query($db, $deleteQuery);
 
@@ -23,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteUser'])) {
     }
 }
 
-// Dohvati sve korisnike
 $query = "SELECT * FROM registrovani";
 $result = mysqli_query($db, $query);
 ?>
@@ -34,7 +31,7 @@ $result = mysqli_query($db, $query);
     <meta charset="UTF-8">
     <title>Lista korisnika</title>
     <style>
-        /* Vaš CSS stil ostaje nepromijenjen */
+        
         body {
             font-family: Arial, sans-serif;
             background: url("../img/hero-bg.png") no-repeat center center fixed;

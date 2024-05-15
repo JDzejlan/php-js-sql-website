@@ -259,28 +259,28 @@ button[name="submit"]:active {
   background-color: #29323c;
   width: 100vw;
   height: 100vh;
-  left: 100%;
+  left: -100%;
   top: 0;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
   overflow-x: hidden;
   transition: 0.5s ease left;
+ 
 }
-#header .nav-list ul.active {
-  left: 0%;
-}
+
 #header .nav-list ul a {
   font-size: 2.5rem;
   font-weight: 500;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0rem;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   padding: 20px;
   display: block;
+  text-align: right;
 }
 #header .nav-list ul a::after {
   content: attr(data-after);
@@ -840,6 +840,7 @@ button[name="submit"]:active {
     padding-left: 20px;
   }
   /* End contact  */
+
 }
 /* End Media Query For Tablet */
 
@@ -874,22 +875,26 @@ button[name="submit"]:active {
 }
 /* End  Media Query For Desktop */
 
-
-/* Stilovi za ikonicu korpe */
 #cartIcon img {
-  width: 40px; /* Širina slike korpe */
-  height: 40px; /* Visina slike korpe */
+  width: 40px; 
+  height: 40px; 
   top: 20px;
-  border-radius: 50%; /* Zaobljeni rubovi */
-  background-color: white; /* Bijela pozadina */
+  border-radius: 50%; 
+  background-color: white; 
 
 }
 
 #cartIcon {
-  position: fixed; /* Pozicioniranje element */
-  top: -10px; /*  od vrha preglednika */
-  right: -20px; /*  od desne strane preglednika */
+  position: fixed; 
+  top: -10px; 
+  right: -20px; 
 
 
+}
+
+.contact-image {
+  max-width: 90%; 
+  display: block; 
+  margin: 20px auto; 
 }
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Narudžba </title>
     <link rel="stylesheet" href="shop.css">
-    <script defer src="korpa.js"></script>
+    <script defer src="js/korpa.js"></script>
 </head>
 
 <body>
@@ -49,13 +49,13 @@
         <text id="izaberiproizvode" class="tekstproiz">Izaberi proizvode :</text>
 
         <?php
-        // Izvlačenje proizvoda iz baze podataka
+
         $sql = "SELECT ProizvodID, ime_proizvoda, cijena_proizvoda, image_url FROM proizvodi";
         $result = $db->query($sql);
 
-        // Provera da li ima rezultata
+
         if ($result->num_rows > 0) {
-            // Prolazak kroz rezultate i generisanje HTML-a za svaki proizvod
+
             while ($row = $result->fetch_assoc()) {
                 $product_name = htmlspecialchars($row["ime_proizvoda"], ENT_QUOTES, 'UTF-8');
                 echo '<div class="form-group">';

@@ -1,12 +1,10 @@
 <?php require('panel/registracija.php');
-  if(isset($_SESSION['korisnik_sesija'])) { echo '<script>window.location="panel/index.php</script>'; return true; } ?>
+if(isset($_SESSION['korisnik_sesija'])) { echo '<script>window.location="panel/index.php"</script>'; return true; } ?>
 <?php require('header-signup.php'); ?>
-
 
   <!-- Signup Section  -->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
 <div class="registerForm">
 		<form action="" method="POST" class="login">
@@ -18,10 +16,10 @@
 				<input type="text" placeholder="Email" name='email'  required>
 			</div>
 			<div>
-				<input type="password" placeholder="Šifra" name="sifra"  required>
+			<input type="password" placeholder="Šifra" name="sifra" required minlength="6">
             </div>
             <div>
-				<input type="password" placeholder="Ponovite unos šifre" name="rsifra" required>
+				<input type="password" placeholder="Ponovite unos šifre" name="rsifra" required minglength="6">
 			</div>
 			<div>
 				<button name="submit">Registrujte se</button>
@@ -67,4 +65,4 @@
 
  <?php
     include_once 'footer.php';
- ?>
+ ?> 
