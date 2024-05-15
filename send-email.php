@@ -13,12 +13,16 @@
 <?php
 $name = $_POST["firstname"];
 $email = $_POST["email"];
-$products = ""; // Inicijalizujemo prazan string za proizvode
+$products = ""; 
 $defaultSubject = "Nova narudžba";
 
 $subject = isset($_POST["subject"]) ? $_POST["subject"] : $defaultSubject;
-$brojTelefona = $_POST["brojTelefona"];
+$brojTelefona = $_POST["phoneNumber"];
+$countryCode = $_POST["countryCode"];
 $adresa = $_POST["adresa"];
+
+// Spajanje državnog koda i broja telefona
+$telefon = $countryCode . $brojTelefona;
 
 
 // Provjeravamo da li su označeni proizvodi niz
@@ -92,8 +96,10 @@ $mail->addAddress('jahicplast@gmail.com', 'Firma');
 
 $mail->Subject = $subject;
 
+$mail->CharSet = 'UTF-8';
 
-$mail->Body = "Email: $email\nOdabrani proizvodi: $products\nUkupna cijena: $totalPrice KM\n Broj telefona: $brojTelefona\n Adresa: $adresa" ;
+
+$mail->Body = "Email: $email\nOdabrani proizvodi: $products\nUkupna cijena: $totalPrice KM\nBroj telefona: $telefon\nAdresa: $adresa";
 
 try {
     $mail->send();

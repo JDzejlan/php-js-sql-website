@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>JP ALU&PVC</title>
 </head>
 
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <script src="korpa.js"></script>
+    <script src="js/korpa.js"></script>
 
 </body>
   </section>

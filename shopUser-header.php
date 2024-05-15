@@ -9,7 +9,8 @@
 
   <title>JP Alu&PVC</title>
 </head>
-
+<?php session_start();
+?>
 <body>
   <!-- Header -->
   <section id="header">
@@ -17,7 +18,7 @@
       <div class="nav-bar">
         <div class="brand">
           <a href="index.php">
-            <h1><span>J</span>ahic <span>P</span>last</h1>
+            <h1><span>J</span>ahić <span>P</span>last</h1>
           </a>
         </div>
         <div class="nav-list">
@@ -33,7 +34,7 @@
         </div>
       </div>
     </div>
-    <script src="../korpa.js"></script>
+    <script src="js/korpa.js"></script>
 
 </body>
   </section>

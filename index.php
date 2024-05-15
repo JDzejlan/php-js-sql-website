@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   
-
-<?php
-    include_once 'header.php';
-    require('konekcija/conn.php');
-    
+<?php include 'header.php';
+require('konekcija/conn.php');
 ?>
 
+<?php session_start();
+?>
   <!-- Hero Section  -->
   <section id="hero">
     <div class="hero container">
@@ -58,12 +57,11 @@ Pružamo visokokvalitetne prozore i vrata prilagođene vašim potrebama. Sa puni
   </section>
   <!-- End Service Section -->
 
-  <!-- Projects Section -->
-<section id="projects">
+  <section id="projects">
   <div class="projects container">
     <div class="projects-header">
       <h1 class="section-title">Prethodni <span>Projekti</span></h1>
-  </div>
+    </div>
     <div class="all-projects">
       <?php
 
@@ -93,10 +91,13 @@ Pružamo visokokvalitetne prozore i vrata prilagođene vašim potrebama. Sa puni
       // Zatvaranje veze s bazom podataka
       mysqli_close($db);
       ?>
-      <script src="../dodajProjekat.js"></script>
+
+      </div>
+      <script src="js/dodajProjekat.js"></script>
     </div>
   </div>
 </section>
+
 <!-- End Projects Section -->
 
   <!-- End Projects Section -->
@@ -164,12 +165,14 @@ Pružamo visokokvalitetne prozore i vrata prilagođene vašim potrebama. Sa puni
       </div>
     </div>
   </section>
+  <img src="https://i.imgur.com/6DOmyev.png" id="lokejsn" alt="Slika" class="contact-image">
+
   <!-- End Contact Section -->
  
  <?php
     include_once 'footer.php';
  ?>
  </head>
- <script defer src="korpa.js"></script>
+ <script defer src="js/korpa.js"></script>
  </body>
 </html>
