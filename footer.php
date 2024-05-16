@@ -14,7 +14,7 @@
     </div>
   </section>
   <!-- End Footer -->
-  <script src="./app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,11 @@
 /* Stilovi za formu */
 .form-container {
-    width: 70%; /* širina forme */
+    width: 70%; 
     max-width: 750px; 
-    padding: 20px; /* Dodatni razmak unutar forme */
+    padding: 20px; 
     border-radius: 8px; 
     background-color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin: auto; 
     margin-top: 100px; 
     text-align: left;
@@ -36,10 +36,10 @@
 .product-image {
     width: 100px; 
     height: 100px; 
-    margin-left: 0px; /* Razmak desno od radio dugmeta */
+    margin-left: 0px; 
     vertical-align: middle; 
     border-radius: 30%;
-    border: 2px solid #333533; /* Okvir oko slike */
+    border: 2px solid #333533; 
 }
 
 .custom-checkbox {
@@ -68,11 +68,11 @@
   .custom-checkbox .checkmark {
     position: absolute; 
     top: 50%; 
-    right: 30px; /* Pomaknite checkbox ulijevo */
-    transform: translateY(-50%); /* Centrirajte vertikalno */
+    right: 30px; 
+    transform: translateY(-50%); 
     width: 20px;
     height: 20px;
-    background-color: #ccc; /* Boja checkboxa */
+    background-color: #ccc; 
     border-radius: 4px;
   }
   
@@ -83,11 +83,11 @@
     width: 5px;
     height: 8px;
     border: solid #fff; 
-    border-width: 0 2px 2px 0; /* Debljina i oblik kvake */
+    border-width: 0 2px 2px 0; 
     position: absolute; 
     top: 40%; 
     left: 50%; 
-    transform: translate(-50%, -50%) rotate(40deg); /* Centriranje i rotacija */
+    transform: translate(-50%, -50%) rotate(40deg); 
     opacity: 1; 
 }
 
@@ -110,8 +110,8 @@
     opacity: 1; /* Kvaka postaje vidljiva kad je checkbox označen */
 }
 #narudzbaa {
-    margin-top: -100px; /* Uklanja razmak odozgo */
-    margin-bottom: -250px; /* Uklanja razmak odozdo */
+    margin-top: -100px; 
+    margin-bottom: -250px; 
 }
 
 .narudzba h1 {
@@ -129,12 +129,12 @@
 
 
 #submit {
-    background-color: #045f3e; /* Pozadina dugmeta */
-    color: rgb(255, 255, 255); /* Boja teksta */
+    background-color: #045f3e; 
+    color: rgb(255, 255, 255); 
     padding: 12px 20px; 
     border-radius: 4px; 
     cursor: pointer; 
-    border-bottom: 1px solid rgb(39, 37, 37); /* Dodaje donju liniju */
+    border-bottom: 1px solid rgb(39, 37, 37); 
     text-transform: uppercase; 
     display: block; 
     border: none; 
@@ -143,11 +143,11 @@
 
 
 #submit:hover {
-    background-color: #28722c; /* Promjena boje pozadine na hover */
+    background-color: #28722c; 
 }
 
 #submit1 {
-    background-color: #262727; /* Pozadina dugmeta */
+    background-color: #262727; 
     color: rgb(255, 255, 255); 
     padding: 12px 20px; 
     border-radius: 10px; 
@@ -160,17 +160,17 @@
 
 
 #submit1:hover {
-    background-color: #d675da; /* Promjena boje pozadine na hover */
+    background-color: #d675da; 
 }
 
 #success-message {
     font-family: 'Roboto', sans-serif; 
-    font-size: 20px; /* Uklonjena razmak između broja i jedinica */
+    font-size: 20px; 
     color: rgb(3, 136, 32);
     font-weight: italic;
     text-align: center;
-    border-bottom: 1px solid rgb(39, 37, 37); /* Dodaje donju liniju */
-    margin-bottom: -30px; /* Dodaje razmak ispod teksta */
+    border-bottom: 1px solid rgb(39, 37, 37); 
+    margin-bottom: -30px; 
 }
 #totalprice {
     font-family: Arial, sans-serif;
@@ -184,16 +184,16 @@
     margin-top: 3px; 
     width: 200px; 
     margin-left: 50; 
-    margin-right: auto; /* Centriranje po horizontali */
+    margin-right: auto; 
     margin-bottom: 10px;
 }
-/* Povećanje veličine teksta za nazive proizvoda */
+
 .product-name {
-    font-size: 25px; /* Promijenite ovu vrijednost prema vašim preferencijama */
+    font-size: 25px;
 }
 
-/* Povećanje veličine teksta za tekst forme */
+
 .form-container label,
 .form-container select {
-    font-size: 16px; /* Promijenite ovu vrijednost prema vašim preferencijama */
+    font-size: 16px; 
 }
