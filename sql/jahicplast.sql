@@ -27,7 +27,6 @@ CREATE TABLE `registrovani` (
 
 INSERT INTO `registrovani` (`korisnik`, `email`, `sifra`, `admin`) VALUES
 ('dzejlan', 'jahicdzejlan@gmail.com', 'dzejlan123', 1),
-('ramiz', 'ramizjoldic@gmail.com', 'ramiz123', 0);
 
 --
 -- Indexes for dumped tables

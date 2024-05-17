@@ -1,10 +1,14 @@
 <?php
 session_start();
 
-// Pretpostavljamo da je korisnik prijavljen ako postoji 'user_id' u sesiji
-$isLoggedIn = isset($_SESSION['korisnik_sesija']);
+$response = array();
 
-// Vraćamo JSON odgovor s ključem 'isLoggedIn'
+if(isset($_SESSION['korisnik_sesija'])) {
+    $response['isLoggedIn'] = true;
+} else {
+    $response['isLoggedIn'] = false;
+}
+
 header('Content-Type: application/json');
-echo json_encode(['isLoggedIn' => $isLoggedIn]);
+echo json_encode($response);
 ?>

@@ -893,7 +893,6 @@ button[name="submit"]:active {
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* Stilizacija za postavljanje dugmeta malo niže */
 
 
 /* Stilizacija dugmeta */
@@ -929,11 +928,61 @@ button[name="submit"]:active {
   border-radius: 5px;
 }
 
-/* Stilovi za ikonicu korpe */
-.cart-icon img {
-  width: 32px; /* Širina slike korpe */
-  height: 30px; /* Automatska visina */
-  position: absolute; /* Pozicioniranje */
 
+#cartIcon img {
+  width: 40px; 
+  height: 40px; 
+  top: 20px;
+  border-radius: 50%; 
+  background-color: white; 
+
+}
+
+#cartIcon {
+  position: fixed; 
+  top: -10px; 
+  right: -20px; 
+
+
+}
+
+
+
+.form-button-container {
+  margin-bottom: 20px; 
+}
+
+#formaProjekta {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 300px; 
+  margin: 10px auto; 
+}
+
+#formaProjekta label {
+  margin-bottom: 5px;
+}
+
+#formaProjekta input[type="text"],
+#formaProjekta textarea {
+  width: calc(100% - 12px); 
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formaProjekta button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#formaProjekta button[type="submit"]:hover {
+  background-color: #45a049;
 }
 
