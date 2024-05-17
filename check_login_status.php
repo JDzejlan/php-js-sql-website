@@ -1,14 +1,15 @@
 <?php
 session_start();
 
-$response = array();
-
-if(isset($_SESSION['korisnik_sesija'])) {
-    $response['isLoggedIn'] = true;
-} else {
-    $response['isLoggedIn'] = false;
+function isLoggedIn() {
+    return isset($_SESSION['korisnik_sesija']);
 }
 
-header('Content-Type: application/json');
-echo json_encode($response);
+function getLoginStatus() {
+    $response = array();
+    $response['isLoggedIn'] = isLoggedIn() ? true : false;
+    return json_encode($response);
+}
+
+echo getLoginStatus();
 ?>
